@@ -32,5 +32,6 @@ crashlytics-build.properties
 PSD/
 Dishes Schema_page001.svg
 client/bower_components/
+node_modules/
 
 
