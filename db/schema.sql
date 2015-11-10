@@ -4,15 +4,17 @@ CREATE DATABASE dishes_db;
 
 USE dishes_db;
 
+-- todo solve this without changing the name of the column
 CREATE TABLE recipes (
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
+  recipe_name varchar(255) NOT NULL,
+  imageUrl varchar(255) NOT NULL,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE ingredients (
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
+  ingredient_name varchar(255) NOT NULL,
   section varchar(255) DEFAULT 'other',
   PRIMARY KEY (id)
   -- todo change section to another table
@@ -28,7 +30,7 @@ CREATE TABLE r_i_join (
 
 CREATE TABLE lists (
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL, -- todo consider changing this to a db timestamp
+  list_name varchar(255) NOT NULL, -- todo consider changing this to a db timestamp
   PRIMARY KEY (id)
 );
 
