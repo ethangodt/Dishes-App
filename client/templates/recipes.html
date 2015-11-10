@@ -1,0 +1,8 @@
+<button ng-click="newRecipe()">+ new recipe</button>
+<button ng-click="shoppingLists()">shopping lists</button>
+
+<div class="recipeContainer" ng-repeat="recipe in recipes">
+  {{ recipe }}
+</div>
+
+<button ng-click="createNewList()">create new list</button>
