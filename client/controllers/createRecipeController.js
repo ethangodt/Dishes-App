@@ -6,16 +6,7 @@ dishes.controller('createRecipeController', ['$scope', '$http', '$location', 'ge
   $scope.quantity = '';
   $scope.section = 'other';
 
-  var ingredients = [{
-    name: 'chicken',
-    quantity: '4 lbs',
-    section: 'other'
-  },
-  {
-    name: 'chicken',
-    quantity: '4 lbs',
-    section: 'Produce'
-  }];
+  var ingredients = [];
 
   // todo set it up so that this can only be invoked if the required fields are set
   $scope.saveIngredient = function () {
@@ -34,12 +25,12 @@ dishes.controller('createRecipeController', ['$scope', '$http', '$location', 'ge
 
   // save recipe - post request to the server, and then a redirect to the homepage
   $scope.saveRecipe = function () {
-    $http.post('/recipes', {
+    $http.post('/api/recipes', {
       name: $scope.recipeName,
       imageUrl: $scope.imageUrl,
       ingredients: ingredients
     })
-    .then(function (res) {
+    .then(function () {
       $location.path('/');
     })
     .catch(function (err) {
