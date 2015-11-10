@@ -1,1 +1,39 @@
-<p>Is this working?</p>
+<button ng-click="cancel()" class="mainButton">
+  cancel
+</button>
+
+<div class="infoContainer">
+
+  <label for="recipeName">Name:</label>
+  <input id="recipeName" name="recipeName" type="text">
+  <label for="imageUrl">Image URL:</label>
+  <input id="imageUrl" name="imageUrl" type="text">
+
+  <div class="thing">
+    <label for="ingredientName">Name:</label>
+    <input ng-model="ingredientName" id="ingredientName" name="ingredientName" type="text">
+    <label for="quantity">Quantity:</label>
+    <input ng-model="quantity" id="quantity" name="quantity" type="text">
+    <select ng-model="section" name="awesome" id="sectionDropDown">
+      <option value="produce">produce</option>
+      <option value="meat">meat</option>
+      <option value="snacks">snacks</option>
+      <option value="other">other</option>
+    </select>
+    <button ng-click="saveIngredient()">Save</button>
+  </div>
+
+</div>
+
+<div class="ingredientsSection">
+  <div ng-repeat="section in getSections()">
+    <h3>{{ section }}</h3>
+    <div ng-repeat="ingredient in getIngredients(section)">
+      <p>
+        {{ ingredient }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<button ng-click="saveRecipe()">Save Recipe</button>
