@@ -1,0 +1,11 @@
+<div class="ingredientsSection">
+  <div ng-repeat="section in getSections()">
+    <h3>{{ section }}</h3>
+    <div ng-repeat="ingredient in getIngredients(section)">
+      <p>
+        {{ ingredient }}
+      </p>
+    </div>
+  </div>
+</div>
+<button ng-click="createList()">create list</button>

@@ -1,20 +1,40 @@
-dishes.controller('recipesController', ['$scope', '$location', function ($scope, $location) {
-  $scope.recipes = [];
+dishes.controller('recipesController', ['$scope', '$location', '$http', 'fetchRecipes', function ($scope, $location, $http, fetchRecipes) {
+  (function () {
+    fetchRecipes('names_only=true')
+      .then(function (recipes) {
+      	$scope.recipes = recipes;
+      })
+  })();
 
-  $scope.newRecipe = function () {
+  var toListCollection = [];
+
+  $scope.toggleInCollection = function (clickedRecipe) {
+    console.log('hey');
+    if (!_.contains(toListCollection, clickedRecipe)) {
+      toListCollection.push(clickedRecipe);
+      console.log('toggling');
+    } else {
+      toListCollection = _.filter(toListCollection, function (recipe) {
+        console.log('toggling');
+        return !(recipe === clickedRecipe);
+      })
+    }
+  };
+
+  $scope.newRecipeButton = function () {
     $location.path('/create-recipe');
   };
 
-  $scope.shoppingLists = function () {
+  $scope.shoppingListsButton = function () {
     $location.path('/shopping-lists');
   };
 
   $scope.createNewList = function () {
-    // take recipes and push to path for redirect
-    // todo make sure to handle the cases where the recipes don't exist on the pending page, maybe
+    var queryString = [];
+    toListCollection.forEach(function (recipe) {
+      queryString.push(recipe.recipe_name);
+    });
+    queryString = queryString.join(',');
+    $location.path('/pending-list').search('recipes', queryString);
   };
-
-  (function () {
-    $scope.recipes = [1,3,2,4];
-  })();
 }]);

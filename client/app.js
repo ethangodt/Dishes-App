@@ -13,6 +13,13 @@ dishes.config(function ($routeProvider) {
     .when('/shopping-lists', {
       templateUrl: 'templates/shoppingLists.html',
       controller: 'shoppingListsController'
-    }
-  )
+    })
+    .when('/shopping-list/:list', {
+      templateUrl: 'templates/shoppingList.html',
+      controller: 'shoppingListController'
+    })
+    .when('/pending-list', {
+        templateUrl: 'templates/pendingList.html',
+        controller: 'pendingListController'
+    });
 });

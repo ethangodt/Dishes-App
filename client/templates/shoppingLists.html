@@ -1,1 +1,7 @@
-<p>{{ test }}</p>
+<ul>
+  <li ng-repeat="list in lists">
+    <a ng-href="#/shopping-list/{{list.list_name}}">
+      {{ list.list_name }}
+    </a>
+  </li>
+</ul>

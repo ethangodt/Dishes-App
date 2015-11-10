@@ -1,0 +1,29 @@
+.recipeContainer {
+	width: 346px;
+	background-color: red;
+	margin-left: 15px;
+	float: left;
+
+	.imageHolder {
+		width: 100%;
+		min-height: 240px;
+	}
+
+	.image {
+		background-size: cover;
+		min-height: 240px;
+	}
+
+	.check {
+	}
+
+	.info {
+		min-height: 70px;
+		background-color: $dark-grey;
+		padding: 25px;
+
+		p {
+			color: white;
+		}
+	}
+}

@@ -4,7 +4,7 @@ dishes.controller('createRecipeController', ['$scope', '$http', '$location', 'ge
 
   $scope.ingredientName = '';
   $scope.quantity = '';
-  $scope.section = 'other';
+  $scope.section = 'Other';
 
   var ingredients = [];
 
@@ -17,7 +17,6 @@ dishes.controller('createRecipeController', ['$scope', '$http', '$location', 'ge
     };
 
     ingredients.push(obj);
-    console.log(ingredients);
 
     $scope.ingredientName = '';
     $scope.quantity = '';

@@ -1,8 +1,24 @@
-<button ng-click="newRecipe()">+ new recipe</button>
-<button ng-click="shoppingLists()">shopping lists</button>
+<nav>
+  <div class="buttonContainer">
+    <button class="mainButton left" ng-click="newRecipeButton()">+ new recipe</button>
+    <button class="mainButton right" ng-click="shoppingListsButton()">shopping lists</button>
+  </div>
+</nav>
 
-<div class="recipeContainer" ng-repeat="recipe in recipes">
-  {{ recipe }}
+<div class="page">
+  <div class="recipeContainer" ng-repeat="recipe in recipes">
+    <div class="imageHolder">
+      <div class="check"></div>
+      <div ng-style="{'background-image':'url({{ recipe.imageUrl }})'}" class="image"></div>
+    </div>
+    <div class="info">
+      <p ng-click="toggleInCollection(recipe)">{{ recipe.recipe_name }}</p>
+    </div>
+  </div>
 </div>
 
-<button ng-click="createNewList()">create new list</button>
+<nav>
+  <div class="buttonContainer">
+    <button class="mainButton center" ng-click="createNewList()">create new list</button>
+  </div>
+</nav>

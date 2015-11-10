@@ -1,4 +1,55 @@
+@import "reset";
+@import "fonts";
+
+// main variables
+$dark-grey: #252424;
+
+body {
+	color: $dark-grey;
+	padding-top: 50px;
+	font-size: 20px;
+}
+
+p, a {
+	font-family: im_fell_great_primer_proRg;
+}
+
 header {
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
 	text-align: center;
 }
+
+button.mainButton {
+	padding: 10px 30px;
+	border: 1px solid $dark-grey;
+	cursor: pointer;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+// todo fix this
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-family: inherit;
+}
+
+h1.mainLogo {
+	font-family: marketing_scriptregular, sans-serif;
+	font-size: 90px;
+}
+
+@import "nav";
+@import "page";
+@import "recipesPage";

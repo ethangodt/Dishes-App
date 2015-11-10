@@ -1,0 +1,12 @@
+<button ng-click="cancelButton()">cancel</button>
+<div class="ingredientsSection">
+  <div ng-repeat="section in getSections()">
+    <h3>{{ section }}</h3>
+    <div ng-repeat="ingredient in getIngredients(section)">
+      <p ng-click="removeIngredient(ingredient)">
+        {{ ingredient }}
+      </p>
+    </div>
+  </div>
+</div>
+<button ng-click="createList()">create list</button>

@@ -1,5 +1,156 @@
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: 'im_fell_great_primer_proRg';
+  src: url("fonts/fell-webfont.eot");
+  src: url("fonts/fell-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fell-webfont.woff2") format("woff2"), url("fonts/fell-webfont.woff") format("woff"), url("fonts/fell-webfont.ttf") format("truetype"), url("fonts/fell-webfont.svg#im_fell_great_primer_proRg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'marketing_scriptregular';
+  src: url("fonts/marketingscript-webfont.eot");
+  src: url("fonts/marketingscript-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/marketingscript-webfont.woff2") format("woff2"), url("fonts/marketingscript-webfont.woff") format("woff"), url("fonts/marketingscript-webfont.ttf") format("truetype"), url("fonts/marketingscript-webfont.svg#marketing_scriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  color: #252424;
+  padding-top: 50px;
+  font-size: 20px; }
+
+p, a {
+  font-family: im_fell_great_primer_proRg; }
+
 header {
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   text-align: center; }
+
+button.mainButton {
+  padding: 10px 30px;
+  border: 1px solid #252424;
+  cursor: pointer; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit; }
+
+h1.mainLogo {
+  font-family: marketing_scriptregular, sans-serif;
+  font-size: 90px; }
+
+nav {
+  display: block; }
+
+.buttonContainer {
+  display: block;
+  width: 375px;
+  margin: 0 auto;
+  overflow: auto; }
+
+div.page {
+  max-width: 1100px;
+  margin: 60px auto;
+  overflow: auto; }
+
+.recipeContainer {
+  width: 346px;
+  background-color: red;
+  margin-left: 15px;
+  float: left; }
+  .recipeContainer .imageHolder {
+    width: 100%;
+    min-height: 240px; }
+  .recipeContainer .image {
+    background-size: cover;
+    min-height: 240px; }
+  .recipeContainer .info {
+    min-height: 70px;
+    background-color: #252424;
+    padding: 25px; }
+    .recipeContainer .info p {
+      color: white; }
 
 /*# sourceMappingURL=main.css.map */
