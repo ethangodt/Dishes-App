@@ -10,4 +10,9 @@ dishes.config(function ($routeProvider) {
       templateUrl: 'templates/createRecipe.html',
       controller: 'createRecipeController'
     })
+    .when('/shopping-lists', {
+      templateUrl: 'templates/shoppingLists.html',
+      controller: 'shoppingListsController'
+    }
+  )
 });
