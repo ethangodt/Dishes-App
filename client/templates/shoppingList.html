@@ -1,11 +1,10 @@
 <div class="ingredientsSection">
   <div ng-repeat="section in getSections()">
-    <h3>{{ section }}</h3>
+    <h3 class="section">{{ section | lowercase }}:</h3>
     <div ng-repeat="ingredient in getIngredients(section)">
-      <p>
-        {{ ingredient }}
+      <p ng-click="removeIngredient(ingredient)">
+        {{ ingredient.name | lowercase }} - {{ ingredient.quantity }}
       </p>
     </div>
   </div>
 </div>
-<button ng-click="createList()">create list</button>

@@ -86,8 +86,9 @@ html {
   font-weight: normal;
   font-style: normal; }
 body {
-  color: #252424;
-  padding-top: 50px;
+  color: #181717;
+  padding-top: 60px;
+  padding-bottom: 100px;
   font-size: 20px; }
 
 p, a {
@@ -99,7 +100,7 @@ header {
 
 button.mainButton {
   padding: 10px 30px;
-  border: 1px solid #252424;
+  border: 1px solid #181717;
   cursor: pointer; }
 
 .left {
@@ -119,7 +120,8 @@ a {
 
 h1.mainLogo {
   font-family: marketing_scriptregular, sans-serif;
-  font-size: 90px; }
+  font-size: 90px;
+  letter-spacing: 0px; }
 
 nav {
   display: block; }
@@ -132,25 +134,58 @@ nav {
 
 div.page {
   max-width: 1100px;
-  margin: 60px auto;
+  margin: 40px auto 80px auto;
   overflow: auto; }
 
 .recipeContainer {
   width: 346px;
-  background-color: red;
+  background-color: black;
   margin-left: 15px;
+  margin-top: 15px;
   float: left; }
   .recipeContainer .imageHolder {
     width: 100%;
-    min-height: 240px; }
+    min-height: 240px;
+    position: relative;
+    cursor: pointer; }
   .recipeContainer .image {
     background-size: cover;
     min-height: 240px; }
+  .recipeContainer .check {
+    position: absolute;
+    width: 100%;
+    min-height: 240px;
+    background: url("images/checkmark.png") no-repeat;
+    background-size: cover; }
   .recipeContainer .info {
     min-height: 70px;
-    background-color: #252424;
-    padding: 25px; }
+    background-color: #181717; }
     .recipeContainer .info p {
-      color: white; }
+      color: white;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 2px;
+      float: left;
+      margin: 25px; }
+    .recipeContainer .info img {
+      float: right;
+      margin: 20px; }
+
+.ingredientsSection {
+  text-align: center;
+  margin: 80px 0; }
+  .ingredientsSection p {
+    margin: 20px; }
+
+.section {
+  font-size: 35px;
+  margin: 35px 0; }
+
+.shoppingList {
+  text-align: center;
+  margin: 30px; }
+
+.infoContainer {
+  text-align: center;
+  margin-top: 80px; }
 
 /*# sourceMappingURL=main.css.map */

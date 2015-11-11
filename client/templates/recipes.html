@@ -4,15 +4,16 @@
     <button class="mainButton right" ng-click="shoppingListsButton()">shopping lists</button>
   </div>
 </nav>
-
+f
 <div class="page">
-  <div class="recipeContainer" ng-repeat="recipe in recipes">
-    <div class="imageHolder">
-      <div class="check"></div>
+  <div class="recipeContainer" ng-repeat="recipe in recipes" ng-init="clicked = false">
+    <div ng-click="clicked = !clicked; toggleInCollection(recipe);" class="imageHolder">
+      <div ng-show="clicked" class="check"></div>
       <div ng-style="{'background-image':'url({{ recipe.imageUrl }})'}" class="image"></div>
     </div>
     <div class="info">
       <p ng-click="toggleInCollection(recipe)">{{ recipe.recipe_name }}</p>
+      <img src="../styles/images/info.png" alt="info" width="30px"/>
     </div>
   </div>
 </div>

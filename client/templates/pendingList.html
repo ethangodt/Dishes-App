@@ -1,12 +1,22 @@
-<button ng-click="cancelButton()">cancel</button>
+<nav>
+  <div class="buttonContainer">
+    <button class="mainButton center" ng-click="cancelButton()">cancel</button>
+  </div>
+</nav>
+
 <div class="ingredientsSection">
   <div ng-repeat="section in getSections()">
-    <h3>{{ section }}</h3>
+    <h3 class="section">{{ section | lowercase }}:</h3>
     <div ng-repeat="ingredient in getIngredients(section)">
       <p ng-click="removeIngredient(ingredient)">
-        {{ ingredient }}
+        {{ ingredient.name | lowercase }} - {{ ingredient.quantity }}
       </p>
     </div>
   </div>
 </div>
-<button ng-click="createList()">create list</button>
+
+<nav>
+  <div class="buttonContainer">
+    <button class="mainButton center" ng-click="createList()">create list</button>
+  </div>
+</nav>

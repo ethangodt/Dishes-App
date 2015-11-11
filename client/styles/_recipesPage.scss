@@ -1,12 +1,15 @@
 .recipeContainer {
 	width: 346px;
-	background-color: red;
+	background-color: black;
 	margin-left: 15px;
+	margin-top: 15px;
 	float: left;
 
 	.imageHolder {
 		width: 100%;
 		min-height: 240px;
+		position: relative;
+		cursor: pointer;
 	}
 
 	.image {
@@ -15,15 +18,29 @@
 	}
 
 	.check {
+		position: absolute;
+		width: 100%;
+		min-height: 240px;
+		background: url("images/checkmark.png") no-repeat;
+		background-size: cover;
 	}
 
 	.info {
 		min-height: 70px;
 		background-color: $dark-grey;
-		padding: 25px;
+		//padding: 25px;
 
 		p {
 			color: white;
+			-webkit-font-smoothing: antialiased;
+			letter-spacing: 2px;
+			float: left;
+			margin: 25px;
+		}
+
+		img {
+			float: right;
+			margin: 20px;
 		}
 	}
 }

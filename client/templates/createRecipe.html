@@ -1,6 +1,8 @@
-<button ng-click="cancel()" class="mainButton">
-  cancel
-</button>
+<nav>
+  <div class="buttonContainer">
+    <button ng-click="cancel()" class="mainButton center">cancel</button>
+  </div>
+</nav>
 
 <div class="infoContainer">
 
@@ -29,13 +31,17 @@
 
 <div class="ingredientsSection">
   <div ng-repeat="section in getSections()">
-    <h3>{{ section }}</h3>
+    <h3 class="section">{{ section | lowercase }}:</h3>
     <div ng-repeat="ingredient in getIngredients(section)">
-      <p>
-        {{ ingredient }}
+      <p ng-click="removeIngredient(ingredient)">
+        {{ ingredient.name | lowercase }} - {{ ingredient.quantity }}
       </p>
     </div>
   </div>
 </div>
 
-<button ng-click="saveRecipe()">Save Recipe</button>
+<nav>
+  <div class="buttonContainer">
+    <button class="mainButton center" ng-click="saveRecipe()">Save Recipe</button>
+  </div>
+</nav>
